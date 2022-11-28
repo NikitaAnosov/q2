@@ -4,10 +4,8 @@ AR=ar
 all: connections
 #----------------------------------
 connections: main.o libmat.a
-	$(CC) $(CFLAGS) -o connections main.o libmat.a
+	$(CC) $(CFLAGS) -o connections main.o
 #--------------------------------
-libmat.a: my_mat.o
-	$(AR) -rcs libmat.a my_mat.o 
 my_mat.o: my_mat.c my_mat.h
 	$(CC) $(CFLAGS) -c my_mat.c
 main.o: main.c my_mat.h
@@ -15,4 +13,4 @@ main.o: main.c my_mat.h
 #--------------------------
 .PHONY: clean all
 clean:
-	rm -f *.o *a connections
+	rm -f *.o connections

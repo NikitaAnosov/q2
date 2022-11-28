@@ -31,7 +31,7 @@ int a_func(int x)
     //     }
     //     printf("\n");
     // }
-    return 11;
+    return 0;
 }
 
 int b_func(int col, int row)

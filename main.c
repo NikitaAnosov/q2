@@ -27,5 +27,5 @@ int main()
             flag = -1;
         }
     }
-    return 14;
+    return 0;
 }
